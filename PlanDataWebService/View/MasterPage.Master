@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="PlanDataWebService.View.MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <title>Master Page</title>
+    <link href="CssFiles/ForMasters.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="Home_Page.aspx">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Exercises</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="EditExercises.aspx">Edit Exercises</a></li>
+                            <li><a href="AddExercises.aspx">Add Exercises</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Muscles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="EditMuscles.aspx">Edit Muscles</a></li>
+                            <li><a href="AddMuscles.aspx">Add Muscles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Conditional session check -->
+                    <li class="dropdown">
+                        <a href="#">Account</a>
+                        <ul class="dropdown-menu">
+                            <% 
+                                // Check if the "username" session variable is not null
+                                if (Session["username"] != null) { 
+                            %>
+                                <!-- Show these links if the user is logged in -->
+                                <li><a href="DashBoard.aspx">Dashboard</a></li>
+                                <li><a href="ManageProfile.aspx">Manage</a></li>
+                                <li><a href="Log_Out.aspx">Log Out</a></li>
+                            <% 
+                                } else { 
+                            %>
+                                <!-- Show these links if the user is not logged in -->
+                                <li><a href="Log_In.aspx">Log In</a></li>
+                                <li><a href="Sign_Up.aspx">Sign Up</a></li>
+                            <% 
+                                }
+                            %>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 DB Operations. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

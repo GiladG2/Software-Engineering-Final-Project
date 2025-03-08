@@ -1,0 +1,198 @@
+﻿/* Set background color for the body */
+body {
+    background-color: #f0effc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the container on the screen */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px; /* Optional: Add padding if needed */
+}
+
+/* Style the form */
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px; /* Rounded corners */
+    width: 75%; /* Width of the form */
+    max-width: 900px; /* Max-width for larger screens */
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Add some padding inside the form */
+    box-sizing: border-box; /* Include padding in the width/height */
+}
+
+/* Additional styles for select elements and labels */
+.select {
+    margin-bottom: 15px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+    .select label {
+        padding-bottom: 25px;
+    }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Style for progress bar */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.progress-step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .progress-step.active {
+        background-color: #4caf50; /* Green color for active step */
+    }
+
+.progress-bar .progress-step:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Style for navigation buttons */
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.workout {
+    font-family: "Lato", sans-serif; /* Applies Lato font */
+}
+.submitPlan {
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    margin-left: 50px;
+    width: 300px;
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    background: #6ccf70; /* Light green resembling nature */
+    transition: 0.3s ease;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .submitPlan:hover {
+        border: 1px solid #6ccf70;
+        background-color: white;
+        color: #6ccf70;
+    }
+
+.replacePlan {
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    margin-right: 50px;
+    width: 300px;
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    background: #ff914d; /* Soft orange, complementary to green */
+    transition: 0.3s ease;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+    cursor: pointer;
+    float: right; /* Align to the right */
+}
+
+    .replacePlan:hover {
+        border: 1px solid #ff914d;
+        background-color: white;
+        color: #ff914d;
+    }
+#linkContainer {
+    display: flex;
+    justify-content: space-between; /* Pushes the buttons to the sides */
+    align-items: center;
+    margin-top: 10px;
+}
+
+#editPlan, #editReq {
+    flex: 0; /* Prevent the buttons from stretching */
+}
+
+.edit {
+    text-decoration: none;
+    background-color: #8ae48a; /* Lighter green than #6ccf70 */
+    color: white; /* White text */
+    padding: 15px 15px; /* Small padding for compact buttons */
+    border-radius: 5px; /* Less rounded corners */
+    font-weight: normal;
+    font-size: 0.8rem; /* Small font size */
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid transparent;
+    width: auto; /* Auto width to fit the text */
+    min-width: 150px; /* Minimum width for consistency */
+}
+
+    .edit:hover {
+        background-color: white; /* Lighter green on hover */
+        color: #8ae48a;
+        border: 1px solid #8ae48a;
+    }
+.pdf-link{
+    text-align:center;
+
+}

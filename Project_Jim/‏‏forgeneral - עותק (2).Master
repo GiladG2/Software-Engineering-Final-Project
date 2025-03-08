@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="forgeneral.Master.cs" Inherits="Project_Jim.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="Js%20Files/BuyProduct.js"></script>
+    <link href="CssFiles/ForEyeButton.css" rel="stylesheet" />
+    <link href="CssFiles/ForHover.css" rel="stylesheet" />
+    <link href="CssFiles/ForDropdown.css" rel="stylesheet" />
+    <link href="CssFiles/Nav1.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7eff39c866.js" crossorigin="anonymous"></script>
+    <script src="Js%20Files/forcoolstuff.js"></script>
+    <script src="Js%20Files/Forsendreviews.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+  
+   .content a {
+    float: none;
+    color: black;
+    background-color: white;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+}
+    </style>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    
+       <div class="navigator" style="text-align:">
+        <a id="land" class="hover hovercenter"  href="Landing_Page1.aspx">Home</a>
+        <a  class="hover hovercenter" href="Gallery1.aspx">Gallery</a>
+       <%
+if (Session["fusername"]==null)
+               Response.Write("<a class='hover hovercenter' href='Review.aspx' onclick='return haveto(event)'>Contact us</a>");
+else
+               Response.Write("<a class='hover hovercenter' href='Review.aspx'>Contact us</a>");
+
+           %>
+           <a href="Shop.aspx" class="hover hovercenter">Shop <i class='fa fa-caret-down' aria-hidden='true'></i></a>
+           <a href="#" class="hover hovercenter">Training log</a>
+           <a href="#" class="hover hovercenter">Get started!</a>
+           <a href="#" class="hover hovercenter">currently logged users:<%=nu%></a>
+           <div style="float:right;padding-right:35px">
+<%if(Session["fusername"] != null)
+    {
+        if (Session["accesskey"].ToString() == "7" || Session["accesskey"].ToString() == "10" )
+        {
+            Response.Write("<a class='special specialleft' href ='SeeReviews.aspx'>See Reviews</a>");
+            Response.Write("<a href='Admin.aspx' class='special specialleft'>Admin</a>");
+
+        }
+        if (Session["accesskey"].ToString() == "10")
+            Response.Write("<a class='special specialleft' href='scheduale123.aspx'>here!</a>");
+    }
+
+            %>
+         <div class="dropdown">
+            <button class="dropbtn">
+                <%
+                    if (Session["fusername"] == null)
+                        Response.Write("Hello guest <i class='fa fa-caret-down' aria-hidden='true'></i>");
+                    else
+                    Response.Write($"Hi {Session["fusername"]}<i class='fa fa-caret-down' aria-hidden='true'></i>");
+                    
+                  %>
+            </button>
+            <div class="content">
+                <%
+                    if(Session["fusername"] == null)
+                    {
+                        Response.Write("<a href='Log_in.aspx' class='hover hovercenter'>Log in</a>");
+                        Response.Write("<a href='Registeration.aspx' class='hover hovercenter'>Sign in</a>");
+                    }
+                    else
+            {
+                        Response.Write("<a href='Editprofile.aspx' class='hover hovercenter' >Edit profile</a>");
+                        Response.Write("<a href='LogOut.aspx' class='hover hovercenter'><i class='fa fa-sign-out' aria-hidden='true'></i> Log out </a>");
+                        Response.Write("<button class='DeleteButton hover hovercenter' onclick ='Areyousure()'>Delete Profile</button>");
+            }
+                    %>
+         </div>
+
+         </div>
+           </div>
+        
+        
+        </div >
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</body>
+</html>

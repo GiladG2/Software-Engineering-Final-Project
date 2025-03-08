@@ -1,0 +1,16 @@
+﻿html {
+    color: white;
+    font-size: 150%;
+    background: rgb(240,147,213);
+    background: linear-gradient(140deg, rgba(240,147,213,1) 0%, rgba(109,93,221,1) 100%);
+    background-attachment: fixed; /*edit*/
+}
+
+.first {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}

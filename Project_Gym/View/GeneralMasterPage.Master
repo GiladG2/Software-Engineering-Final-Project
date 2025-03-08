@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GeneralMasterPage.master.cs" Inherits="Project_Gym.View.GeneralMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="Js%20Files/BuyProduct.js"></script>
+    <link href="CssFiles/ForEyeButton.css" rel="stylesheet" />
+    <link href="CssFiles/ForHover.css" rel="stylesheet" />
+    <link href="CssFiles/ForDropdown.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="CssFiles/Nav1.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7eff39c866.js" crossorigin="anonymous"></script>
+    <script src="Js%20Files/forcoolstuff.js"></script>
+    <script src="Js%20Files/Forsendreviews.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="Js%20Files/React/Test.js"></script>
+</head>
+
+    <style>
+  
+   .content a {
+    float: none;
+    color: black;
+    background-color: white;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+}
+    </style>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    
+       
+       <div class="navigator" style="text-align:">
+        <a id="land" class="hover hovercenter"  href="Landing_Page.aspx">Home</a>
+        <a  class="hover hovercenter" href="Gallery.aspx">Gallery</a>
+       <%
+if (Session["fusername"]==null)
+               Response.Write("<a class='hover hovercenter' href='Send_Review.aspx' >Contact us</a>");
+else
+               Response.Write("<a class='hover hovercenter' href='Send_Review.aspx'>Contact us</a>");
+
+           %>
+           <a href="#" onclick="UnderConstruction()" class="hover hovercenter">Shop <i class='fa fa-caret-down' aria-hidden='true'></i></a>
+           <a href= "Training_Log.aspx" class="training trainingleft">Training log</a>
+           <a href="Training_Plans.aspx" class="training trainingleft"><%=planMsg %></a>
+           <a href="#" class="hover hovercenter">currently logged users:<%=nu%></a>
+           <div style="float:right;padding-right:35px">
+<%if(Session["fusername"] != null)
+    {
+        if (Session["accesskey"].ToString() == "7" || Session["accesskey"].ToString() == "10" || Session["accesskey"].ToString() == "5")
+        {
+
+            Response.Write("<a class = '' href='https://localhost:44384/View/Home_Page.aspx'>DB Server</a>");
+            Response.Write("<a class='special specialleft' href ='SeeReviews.aspx'>See Reviews</a>");
+            Response.Write("<a href='Admin.aspx' class='special specialleft'>Admin</a>");
+
+        }
+        
+    }
+
+            %>
+            
+         <div class="dropdown">
+            <button class="dropbtn">
+                <%
+                    if (Session["fusername"] == null)
+                        Response.Write("Hello guest <i class='fa fa-caret-down' aria-hidden='true'></i>");
+else
+            {
+                if(!unseenMessages.Equals(""))                 
+                            Response.Write($"Hi {Session["fusername"]}<i class='fa fa-caret-down' aria-hidden='true'></i> <span class='unseenMessages'>{unseenMessages}</span>");
+                else
+                            Response.Write($"Hi {Session["fusername"]}<i class='fa fa-caret-down' aria-hidden='true'></i>");
+
+            }
+                    
+                  %>
+            </button>
+            <div class="content">
+                <%
+                    if(Session["fusername"] == null)
+                    {
+                        Response.Write("<a href='Log_In.aspx' class='hover hovercenter'>Log in</a>");
+                        Response.Write("<a href='Registration.aspx' class='hover hovercenter'>Sign up</a>");
+                    }
+                    else
+                    {
+                        Response.Write("<a href='Edit_Profile.aspx' class='hover hovercenter' >Edit profile</a>");
+                        Response.Write("<a href='Log_Out.aspx' class='hover hovercenter'><i class='fa fa-sign-out' aria-hidden='true'></i> Log out </a>");
+                        if(!unseenMessages.Equals(""))
+                                Response.Write($"<a href='Mail.aspx' class='hover hovercenter'><i class=\"fa-regular fa-envelope\"></i> Mail <span class='unseenMessages'>{unseenMessages}</span></a> ");
+                        else
+                                Response.Write($"<a href='Mail.aspx' class='hover hovercenter'><i class=\"fa-regular fa-envelope\"></i> Mail</a> ");
+                        Response.Write("<button class='DeleteButton hover hovercenter' onclick ='Areyousure()'>Delete Profile</button>");
+                    }
+                    %>
+         </div>
+
+         </div>
+           </div>
+        
+        
+        </div >
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</body>
+</html>

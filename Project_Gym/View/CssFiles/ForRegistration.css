@@ -1,0 +1,143 @@
+﻿body {
+    background-color: #f0effc;
+}
+form {
+    display: flex;
+    border-radius: 15px; /* Add rounded corners */
+    margin: 50px auto 0; /* Center the box horizontally */
+    width: 75%;
+    height:750px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.eror{
+    color:orange;
+}
+#left-panel, #right-panel {
+    padding: 20px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+#left-panel {
+   background: #4835d4;
+   color: white;
+    border-top-left-radius: 15px; /* Match the container's rounded corners */
+    border-bottom-left-radius: 15px;
+}
+#right-panel {
+    background: white;
+    color: black;
+    border-top-right-radius: 15px; /* Match the container's rounded corners */
+    border-bottom-right-radius: 15px;
+}
+#right-panel h1,#left-panel h1 {
+    text-align: center;
+}
+#right-panel h1 {
+   color: #4835d4
+}
+h2,h1,h4, label{
+    padding-top: 25px;
+font-family: 'Lato', sans-serif;
+}
+
+
+
+#submit {
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    margin-left: 50px;
+    width: 300px;
+    color: white;
+    border-radius: 25px;
+    padding: 20px; /* Adjust padding as needed */
+    border: none;
+    background: #4835d4;
+    transition: 0.3s ease;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center; /* Center text horizontally */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+    #submit:hover {
+        border: 1px solid #d147f0;
+        background-color: white;
+        color: #4835d4; /* Change text color */
+    }
+
+.inp {
+    padding-top: 10px;
+    border: none;
+    outline: none;
+    margin-left: 50px;
+    width: 300px;
+}
+#left-panel .inp {
+    background-color: inherit;
+    border-bottom: 2px solid #cfcfcf;
+    color:white;
+}
+    #left-panel .inp::placeholder {
+        color: white; /* Change to your desired color */
+        font-size: 15px;
+    }
+#right-panel .inp {
+    border-bottom: 2px solid #4835d4;
+}
+#left-panel .inp:focus {
+    border-bottom: 3px solid #fff;
+}
+#right-panel .inp:focus {
+    border-bottom: 3px solid #3f2ad4;
+
+}
+#access{
+    background:inherit;
+    color:white;
+    border-color:white;
+    border-radius:5px;
+    font-size:110%;
+}
+#tac{
+    text-decoration:underline;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Max width */
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

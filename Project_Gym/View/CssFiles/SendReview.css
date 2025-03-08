@@ -1,0 +1,55 @@
+﻿body {
+    background-color: #f8f9fd;
+}
+#review {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    margin: auto;
+    width: 1050px;
+    height: 470px;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+#submit {
+    background-color: inherit;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Open Sans', sans-serif;
+    border-radius:15px;
+}
+select {
+    font-size: 16px;
+    padding: 5px 25px 5px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpolygon fill='%23f6e310' points='4,5 8,0 0,0'/%3E%3C/svg%3E") no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    color: #f6e310;
+}
+
+    select::-ms-expand {
+        display: none;
+    }
+
+option {
+    font-size: 16px;
+    color: #f6e310;
+}
+
+select:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpolygon fill='black' points='4,5 8,0 0,0'/%3E%3C/svg%3E");
+    position: absolute;
+    top: calc(50% - 2.5px);
+    right: 10px;
+}
+

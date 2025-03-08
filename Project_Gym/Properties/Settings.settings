@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Project_Gym.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Project_Gym_EmailSender_EmailSender" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44396/EmailSender.asmx</Value>
+    </Setting>
+    <Setting Name="Project_Gym_SmsSender_SMSSender" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44396/SMSSender.asmx</Value>
+    </Setting>
+    <Setting Name="Project_Gym_DBOperations_DBOperations" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44396/DBOperations.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

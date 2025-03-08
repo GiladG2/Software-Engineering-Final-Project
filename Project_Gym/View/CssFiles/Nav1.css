@@ -1,0 +1,25 @@
+﻿.navigator {
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+    .navigator a {
+        float: left;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+.unseenMessages {
+    background-color: #ff4b5c; /* A red background color, you can change it */
+    color: white; /* White text color */
+    border-radius: 50%; /* This makes the background a circle */
+    font-weight: bold;
+    min-width: 20px; /* Minimum width to ensure circle stays circular even with smaller numbers */
+    text-align: center;
+    padding: 5px;
+}
+/* Optional: Center the navigation links on the page */
+

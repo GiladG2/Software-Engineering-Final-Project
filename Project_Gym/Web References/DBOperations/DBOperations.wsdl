@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddNewMuscleAPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muscleName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="muscleGroup" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMuscleAPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddNewMuscleAPIResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMuscle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muscleName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="muscleGroup" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMuscleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddNewMuscleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMuscleAPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="muscleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMuscleAPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteMuscleAPIResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMuscle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="muscleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMuscleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteMuscleResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewExerciseAPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="difficulty" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeToComplete" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="muscleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewExerciseAPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddNewExerciseAPIResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewExercise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="difficulty" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeToComplete" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="muscleId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewExerciseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddNewExerciseResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteExerciseAPI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="exerciseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteExerciseAPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteExerciseAPIResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteExercise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="exerciseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteExerciseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteExerciseResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllExercisesAPI">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllExercisesAPIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllExercisesAPIResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllExercises">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllExercisesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllExercisesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditExerciseAPIAsync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="exerciseId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="difficulty" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeToComplete" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditExerciseAPIAsyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditExerciseAPIAsyncResult" type="tns:TaskOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TaskOfBoolean">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Task" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Task" />
+      <s:element name="EditExerciseAsync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="exerciseId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="exerciseDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="difficulty" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="timeToComplete" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditExerciseAsyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditExerciseAsyncResult" type="tns:TaskOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditMuscleAPIAsync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="muscleId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="muscleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditMuscleAPIAsyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditMuscleAPIAsyncResult" type="tns:TaskOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditMuscleAsync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="muscleId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="muscleName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditMuscleAsyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditMuscleAsyncResult" type="tns:TaskOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddNewMuscleAPISoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewMuscleAPI" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMuscleAPISoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewMuscleAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMuscleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewMuscle" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMuscleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewMuscleResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMuscleAPISoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMuscleAPI" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMuscleAPISoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMuscleAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMuscleSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMuscle" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMuscleSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMuscleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewExerciseAPISoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewExerciseAPI" />
+  </wsdl:message>
+  <wsdl:message name="AddNewExerciseAPISoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewExerciseAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewExerciseSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewExercise" />
+  </wsdl:message>
+  <wsdl:message name="AddNewExerciseSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewExerciseResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteExerciseAPISoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteExerciseAPI" />
+  </wsdl:message>
+  <wsdl:message name="DeleteExerciseAPISoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteExerciseAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteExerciseSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteExercise" />
+  </wsdl:message>
+  <wsdl:message name="DeleteExerciseSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteExerciseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllExercisesAPISoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllExercisesAPI" />
+  </wsdl:message>
+  <wsdl:message name="GetAllExercisesAPISoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllExercisesAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllExercisesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllExercises" />
+  </wsdl:message>
+  <wsdl:message name="GetAllExercisesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllExercisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditExerciseAPIAsyncSoapIn">
+    <wsdl:part name="parameters" element="tns:EditExerciseAPIAsync" />
+  </wsdl:message>
+  <wsdl:message name="EditExerciseAPIAsyncSoapOut">
+    <wsdl:part name="parameters" element="tns:EditExerciseAPIAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditExerciseAsyncSoapIn">
+    <wsdl:part name="parameters" element="tns:EditExerciseAsync" />
+  </wsdl:message>
+  <wsdl:message name="EditExerciseAsyncSoapOut">
+    <wsdl:part name="parameters" element="tns:EditExerciseAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditMuscleAPIAsyncSoapIn">
+    <wsdl:part name="parameters" element="tns:EditMuscleAPIAsync" />
+  </wsdl:message>
+  <wsdl:message name="EditMuscleAPIAsyncSoapOut">
+    <wsdl:part name="parameters" element="tns:EditMuscleAPIAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditMuscleAsyncSoapIn">
+    <wsdl:part name="parameters" element="tns:EditMuscleAsync" />
+  </wsdl:message>
+  <wsdl:message name="EditMuscleAsyncSoapOut">
+    <wsdl:part name="parameters" element="tns:EditMuscleAsyncResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DBOperationsSoap">
+    <wsdl:operation name="AddNewMuscleAPI">
+      <wsdl:input message="tns:AddNewMuscleAPISoapIn" />
+      <wsdl:output message="tns:AddNewMuscleAPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMuscle">
+      <wsdl:input message="tns:AddNewMuscleSoapIn" />
+      <wsdl:output message="tns:AddNewMuscleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMuscleAPI">
+      <wsdl:input message="tns:DeleteMuscleAPISoapIn" />
+      <wsdl:output message="tns:DeleteMuscleAPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMuscle">
+      <wsdl:input message="tns:DeleteMuscleSoapIn" />
+      <wsdl:output message="tns:DeleteMuscleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewExerciseAPI">
+      <wsdl:input message="tns:AddNewExerciseAPISoapIn" />
+      <wsdl:output message="tns:AddNewExerciseAPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewExercise">
+      <wsdl:input message="tns:AddNewExerciseSoapIn" />
+      <wsdl:output message="tns:AddNewExerciseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExerciseAPI">
+      <wsdl:input message="tns:DeleteExerciseAPISoapIn" />
+      <wsdl:output message="tns:DeleteExerciseAPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExercise">
+      <wsdl:input message="tns:DeleteExerciseSoapIn" />
+      <wsdl:output message="tns:DeleteExerciseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExercisesAPI">
+      <wsdl:input message="tns:GetAllExercisesAPISoapIn" />
+      <wsdl:output message="tns:GetAllExercisesAPISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExercises">
+      <wsdl:input message="tns:GetAllExercisesSoapIn" />
+      <wsdl:output message="tns:GetAllExercisesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditExerciseAPIAsync">
+      <wsdl:input message="tns:EditExerciseAPIAsyncSoapIn" />
+      <wsdl:output message="tns:EditExerciseAPIAsyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditExerciseAsync">
+      <wsdl:input message="tns:EditExerciseAsyncSoapIn" />
+      <wsdl:output message="tns:EditExerciseAsyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMuscleAPIAsync">
+      <wsdl:input message="tns:EditMuscleAPIAsyncSoapIn" />
+      <wsdl:output message="tns:EditMuscleAPIAsyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditMuscleAsync">
+      <wsdl:input message="tns:EditMuscleAsyncSoapIn" />
+      <wsdl:output message="tns:EditMuscleAsyncSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DBOperationsSoap" type="tns:DBOperationsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddNewMuscleAPI">
+      <soap:operation soapAction="http://tempuri.org/AddNewMuscleAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMuscle">
+      <soap:operation soapAction="http://tempuri.org/AddNewMuscle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMuscleAPI">
+      <soap:operation soapAction="http://tempuri.org/DeleteMuscleAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMuscle">
+      <soap:operation soapAction="http://tempuri.org/DeleteMuscle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewExerciseAPI">
+      <soap:operation soapAction="http://tempuri.org/AddNewExerciseAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewExercise">
+      <soap:operation soapAction="http://tempuri.org/AddNewExercise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExerciseAPI">
+      <soap:operation soapAction="http://tempuri.org/DeleteExerciseAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExercise">
+      <soap:operation soapAction="http://tempuri.org/DeleteExercise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExercisesAPI">
+      <soap:operation soapAction="http://tempuri.org/GetAllExercisesAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExercises">
+      <soap:operation soapAction="http://tempuri.org/GetAllExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditExerciseAPIAsync">
+      <soap:operation soapAction="http://tempuri.org/EditExerciseAPIAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditExerciseAsync">
+      <soap:operation soapAction="http://tempuri.org/EditExerciseAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMuscleAPIAsync">
+      <soap:operation soapAction="http://tempuri.org/EditMuscleAPIAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMuscleAsync">
+      <soap:operation soapAction="http://tempuri.org/EditMuscleAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DBOperationsSoap12" type="tns:DBOperationsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddNewMuscleAPI">
+      <soap12:operation soapAction="http://tempuri.org/AddNewMuscleAPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMuscle">
+      <soap12:operation soapAction="http://tempuri.org/AddNewMuscle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMuscleAPI">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMuscleAPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMuscle">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMuscle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewExerciseAPI">
+      <soap12:operation soapAction="http://tempuri.org/AddNewExerciseAPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewExercise">
+      <soap12:operation soapAction="http://tempuri.org/AddNewExercise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExerciseAPI">
+      <soap12:operation soapAction="http://tempuri.org/DeleteExerciseAPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExercise">
+      <soap12:operation soapAction="http://tempuri.org/DeleteExercise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExercisesAPI">
+      <soap12:operation soapAction="http://tempuri.org/GetAllExercisesAPI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExercises">
+      <soap12:operation soapAction="http://tempuri.org/GetAllExercises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditExerciseAPIAsync">
+      <soap12:operation soapAction="http://tempuri.org/EditExerciseAPIAsync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditExerciseAsync">
+      <soap12:operation soapAction="http://tempuri.org/EditExerciseAsync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMuscleAPIAsync">
+      <soap12:operation soapAction="http://tempuri.org/EditMuscleAPIAsync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditMuscleAsync">
+      <soap12:operation soapAction="http://tempuri.org/EditMuscleAsync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBOperations">
+    <wsdl:port name="DBOperationsSoap" binding="tns:DBOperationsSoap">
+      <soap:address location="https://localhost:44396/DBOperations.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DBOperationsSoap12" binding="tns:DBOperationsSoap12">
+      <soap12:address location="https://localhost:44396/DBOperations.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

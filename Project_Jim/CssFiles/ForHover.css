@@ -1,0 +1,43 @@
+﻿.hover::after
+{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:0.17rem;
+    background-color:#808080;
+    left:0;
+    bottom:0;
+}
+
+.hovercenter::after
+{
+    transform:scale(0,1);
+    transition: 0.3s ease;
+}
+.hovercenter:hover::after
+{
+    transform:scale(1,1);
+}
+.hover {
+    position: relative;
+}/*
+.special::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.17rem;
+    background-color: #808080;
+    left: 0;
+    bottom: 0;
+}
+.specialleft:hover::after{
+    transform:scale(1,1);
+}
+.specialleft::after{
+    transform:scale(0,1);
+    transform-origin:0% 100%;
+    transition:0.3s ease;
+}
+.special{
+    position:relative;
+}*/

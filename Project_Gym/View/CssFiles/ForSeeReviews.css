@@ -1,0 +1,49 @@
+﻿body { background-color:white
+}
+.review {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    width: 250px;
+    height: 275px;
+    padding: 10px;
+    border-radius: 15px;
+    position: relative;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Open Sans', sans-serif;
+}
+.star {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    #reviews {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+.button1 {
+    border: none;
+    outline: none;
+    background-color:inherit;
+    text-decoration:underline;
+    font-size:125%;
+    font-family:inherit;
+    cursor:pointer
+}
+.title{
+    font-size:70%
+}
+.respond {
+    display: none;
+}

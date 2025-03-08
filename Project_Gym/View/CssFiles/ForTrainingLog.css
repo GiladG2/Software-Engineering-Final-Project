@@ -1,0 +1,483 @@
+﻿#modalContainer {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#modal {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    font-family: inherit;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius:15px;
+    width:750px;
+    padding:20px;
+}
+#exerciseList{
+    border-radius:15px;
+    border: 2px solid black;
+}
+/* Hide the number input's spinner arrows in most browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+}
+/* Modal Styling */
+#modalContainer {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#modal {
+    background-color: #ffffff; /* Creamy white for the modal box */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 750px;
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal Animation */
+#modalContainer {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Exercise List Styling inside Modal */
+#exerciseList {
+    border-radius: 15px;
+    border: 2px solid #6f4f1e; /* Rich coffee border */
+    background-color: #f3e0d7; /* Soft peachy color for the list */
+    padding: 10px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Individual Exercise Box inside Modal */
+.exercise-box {
+    background-color: #fdf0e2; /* Light buttery background for each exercise box */
+    border: 2px solid #d9b68c; /* Light coffee-brown border */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover Effect for Exercise Box */
+    .exercise-box:hover {
+        background-color: #f2e0b2; /* Slightly darker shade for hover effect */
+    }
+
+/* Exercise Name Styling inside Exercise Box */
+.exercise-name {
+    font-family: 'Lobster', cursive; /* Fun, inviting font for exercise name */
+    font-size: 1.2em;
+    color: #6f4f1e; /* Dark brown for the exercise names */
+}
+
+/* Reps and Weight Styling inside Exercise Box */
+.exercise-reps,
+.exercise-weight {
+    font-weight: bold;
+    color: #6f4f1e;
+}
+
+/* Buttons Styling inside Modal */
+button {
+    background-color: #a1673f; /* Warm coffee color for buttons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover Effect for Modal Buttons */
+    button:hover {
+        background-color: #7f502d; /* Darker coffee shade for hover */
+    }
+
+/* Styling for Number Inputs inside Modal (Reps, Weight) */
+input[type="number"],
+input[type="date"],
+select {
+    background-color: #fff3e6; /* Light pastel beige for inputs */
+    border: 1px solid #d9b68c; /* Light coffee border for inputs */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+    /* Focus State for Inputs inside Modal */
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+        border-color: #a1673f; /* Dark coffee color for focus state */
+        outline: none;
+    }
+
+/* Styling for Buttons Next to Number Inputs (e.g. Reps/Weight - and + buttons) */
+button[data-action="minus"],
+button[data-action="plus"] {
+    font-size: 1.2rem; /* Larger font size for buttons */
+    padding: 8px 15px; /* Bigger padding */
+    margin: 0 5px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners for the buttons */
+    cursor: pointer;
+}
+
+    /* Hover Effect for +/- Buttons */
+    button[data-action="minus"]:hover,
+    button[data-action="plus"]:hover {
+        background-color: #7f502d; /* Darker shade on hover */
+    }
+
+/* Styling for Reps and Weight Input Containers */
+#reps-container,
+#weight-container {
+    display: inline-flex;
+    align-items: center; /* Vertically align the input and buttons */
+    margin-bottom: 10px;
+}
+
+/* Label Styling for Reps and Weight */
+#reps-label,
+#weight-label {
+    font-size: 1.2em;
+    color: #6f4f1e; /* Matching label color */
+    margin-right: 10px; /* Space between label and input/button */
+}
+/* General Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: #f3e0d7; /* Soft peachy background */
+    color: #6f4f1e; /* Dark brown text color */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #6f4f1e;
+}
+
+/* Dashboard Styles */
+#dashboard {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fdf0e2; /* Light buttery background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    #dashboard h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    #dashboard h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    #dashboard select {
+        background-color: #fff3e6; /* Light beige for select dropdown */
+        border: 1px solid #d9b68c;
+        padding: 8px;
+        border-radius: 5px;
+        font-size: 1.1em;
+    }
+
+        #dashboard select:focus {
+            border-color: #a1673f; /* Dark coffee color */
+            outline: none;
+        }
+
+#test {
+    font-size: 2em;
+    color: #a1673f;
+}
+
+/* Graph Container */
+#myChart {
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fdf0e2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Styling */
+#modalContainer {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#modal {
+    background-color: #ffffff; /* Creamy white for the modal box */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 80%;
+    max-width: 750px;
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#exerciseList {
+    border-radius: 15px;
+    border: 2px solid #6f4f1e;
+    background-color: #f3e0d7;
+    padding: 10px;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Individual Exercise Box inside Modal */
+.exercise-box {
+    background-color: #fdf0e2;
+    border: 2px solid #d9b68c;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover Effect for Exercise Box */
+    .exercise-box:hover {
+        background-color: #f2e0b2;
+    }
+
+/* Exercise Name Styling inside Exercise Box */
+.exercise-name {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+    color: #6f4f1e;
+}
+
+/* Reps and Weight Styling inside Exercise Box */
+.exercise-reps,
+.exercise-weight {
+    font-weight: bold;
+    color: #6f4f1e;
+}
+
+/* Buttons Styling inside Modal */
+button {
+    background-color: #a1673f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+    /* Hover Effect for Modal Buttons */
+    button:hover {
+        background-color: #7f502d;
+    }
+
+/* Styling for Number Inputs inside Modal (Reps, Weight) */
+input[type="number"],
+input[type="date"],
+select {
+    background-color: #fff3e6;
+    border: 1px solid #d9b68c;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+    /* Focus State for Inputs inside Modal */
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+        border-color: #a1673f;
+        outline: none;
+    }
+
+/* Styling for Buttons Next to Number Inputs (e.g. Reps/Weight - and + buttons) */
+button[data-action="minus"],
+button[data-action="plus"] {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    /* Hover Effect for +/- Buttons */
+    button[data-action="minus"]:hover,
+    button[data-action="plus"]:hover {
+        background-color: #7f502d;
+    }
+
+/* Styling for Reps and Weight Input Containers */
+#reps-container,
+#weight-container {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Label Styling for Reps and Weight */
+#reps-label,
+#weight-label {
+    font-size: 1.2em;
+    color: #6f4f1e;
+    margin-right: 10px;
+}
+/* Default button layout */
+.button-container {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+    /* Move buttons to a new line when editing */
+    .button-container.move-buttons {
+        display: block;
+        margin-top: 10px; /* Add spacing from the input fields */
+        text-align: left; /* Align buttons to the left */
+    }
+
+    .button-container button {
+        margin-bottom: 5px; /* Add spacing between buttons */
+    }
+/* Feedback Section */
+#feedback-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#get-feedback-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    #get-feedback-btn:hover {
+        background-color: #45a049;
+    }
+
+/* Feedback Modal */
+#feedback-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    display: none;
+}
+
+    #feedback-modal-container.visible {
+        display: flex;
+    }
+
+#feedback-modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+    #feedback-modal h2 {
+        margin-bottom: 20px;
+    }
+
+    #feedback-modal .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+    }
+
+#feedback-content {
+    margin-top: 10px;
+    font-size: 14px;
+}

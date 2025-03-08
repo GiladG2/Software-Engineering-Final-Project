@@ -1,0 +1,268 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+    color: #333;
+}
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    .dashboard-header h1 {
+        font-size: 2.5rem;
+        color: #0073e6;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .dashboard-header p {
+        font-size: 1.2rem;
+        color: #555;
+    }
+.popup {
+    position: relative; /* Relative to the modal */
+    display: inline-block; /* Align with surrounding content */
+    margin-top: 1rem; /* Add spacing above the message */
+}
+
+    .popup .popuptext {
+        visibility: hidden; /* Initially hidden */
+        width: auto;
+        background-color: #333; /* Dark background for better visibility */
+        color: #fff; /* White text */
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: -40px; /* Adjust position relative to button */
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+        .popup .popuptext.show {
+            visibility: visible; /* Show the popup */
+            opacity: 1;
+            transition: opacity 0.3s ease; /* Smooth fade-in */
+        }
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #f0f4f8;
+    min-height: 100vh;
+}
+
+/* Split Container */
+.split-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px; /* Increased width for a larger container */
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Left and Right Panels */
+.left-panel,
+.right-panel {
+    flex: 1;
+    padding: 2rem;
+    background: #ffffff;
+}
+
+/* Left Panel */
+.left-panel {
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.api-key-box {
+    text-align: center;
+    padding: 1rem;
+    background: #f9fbff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Statistics Section */
+.statistics-box {
+    width: 100%; /* Take full width of the parent */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 2rem; /* Add spacing below the section */
+}
+
+    .statistics-box h2 {
+        margin-bottom: 1rem; /* Space between the heading and items */
+        font-size: 1.5rem;
+        color: #0056b3;
+    }
+
+.statistics-items {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-evenly; /* Equal spacing between items */
+    gap: 1rem; /* Add gap between items */
+    flex-wrap: wrap; /* Wrap items if screen size is smaller */
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #e8f4ff;
+    width: 25%; /* Adjust width to ensure items fit in a row */
+    max-width: 250px; /* Prevent items from becoming too large */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+    .stat-item span {
+        font-size: 2rem;
+        color: #333;
+        font-weight: bold; /* Make the numbers bolder */
+    }
+/* Right Panel */
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#chart_div {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown and Labels */
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+    .close-btn:hover {
+        color: #333;
+    }
+
+/* Buttons */
+.generate-button,
+.copy-button {
+    background-color: #0073e6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+    .generate-button:hover,
+    .copy-button:hover {
+        background-color: #005bb5;
+    }
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9fbff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .filters label {
+        font-size: 1rem;
+        color: #333;
+        margin-right: 0.5rem;
+        font-weight: bold;
+    }
+
+    .filters select {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #fff;
+        min-width: 200px;
+        cursor: pointer;
+        transition: border-color 0.2s;
+    }
+
+        .filters select:hover {
+            border-color: #0073e6;
+        }

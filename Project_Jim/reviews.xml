@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<All>
+  <review>
+    <title>sssss</title>
+    <username>ssss</username>
+    <comment>ssssssss</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>15:09:25</date>
+  </review>
+  <review>
+    <title>asdfasdf</title>
+    <username>123</username>
+    <comment>ffffff</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>20:40:34</date>
+  </review>
+  <review>
+    <title>My review</title>
+    <username>Goliver123</username>
+    <comment>asdasaddsa</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>08:08:25</date>
+  </review>
+  <review>
+    <title>my honest review</title>
+    <username>Bagrut</username>
+    <comment>I recently visited the website and I was quite impressed with its layout and content. The homepage had a clean design and was easy to navigate. The website had a good selection of articles covering a range of topics, and I found the search function to be very helpful. One of the features I particularly liked was the ability to save articles for later. This made it easy for me to keep track of articles I wanted to read at a later time. Additionally, the website had a section where users could submit their own articles, which I thought was a nice touch. The website was also mobile-responsive, which meant I could easily access it from my phone or tablet. I did notice a few minor issues with page loading speed, but overall the website was very fast and responsive. Overall, I would highly recommend this website to anyone looking for informative articles on a variety of topics. The layout was clean and user-friendly, the content was well-written and informative, and the ability to save articles for later was a nice touch.</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>20:52:26</date>
+  </review>
+  <review>
+    <title>the gallery needs a change</title>
+    <username>Bagrut</username>
+    <comment>I think that the hover is extremly bad and it should be changed to something else!!!!</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>20:38:48</date>
+  </review>
+  <review>
+    <title>I think the sign-in is great</title>
+    <username>goliver103</username>
+    <comment>i think that it is one of the best i have ever seen!</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>17:03:20</date>
+  </review>
+  <review>
+    <title>My opinion!</title>
+    <username>Bagrut</username>
+    <comment>i think this website wouldve been better if it had more admins</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>17:00:54</date>
+  </review>
+  <review>
+    <title>I think that this is great!</title>
+    <username>Goliver123</username>
+    <comment>I think that the website is actually outstanding!, and I dont</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>19:42:36</date>
+  </review>
+</All>

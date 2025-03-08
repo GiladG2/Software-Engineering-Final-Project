@@ -1,0 +1,79 @@
+﻿body {
+    background-color: #f8f9fd;
+}
+
+.Admin-Container {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // Center-align children horizontally justify-content: center;
+    // Center-align children vertically (optional if you want it in the middle of the page) text-align: center;
+    // Center-align text inside container padding: 20px;
+}
+
+
+
+.search-box {
+    width: 300px;
+    margin-right: 35px;
+    border: none;
+    background: inherit;
+    border-bottom: 2px solid grey;
+}
+
+    .search-box ::placeholder {
+        color: pink;
+    }
+
+.search-button {
+    border: none;
+    outline: none;
+    margin-left: 35px;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    transition: 0.3s ease;
+    font-weight: bold;
+    text-align: center; /* Center text horizontally */
+    cursor: pointer; /* Change cursor on hover */
+    background-color: #F5A300;
+    color: white;
+    padding: 10px;
+    width: 150px;
+}
+
+
+
+    .search-button:hover {
+        background-color: white;
+        color: #F5A300; /* Change text color */
+        border: 0.5px solid #F5A300
+    }
+
+.filter-users {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: inherit;
+    color: #F5A300; /* Match the color of the button */
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+    .filter-users option {
+        background-color: inherit;
+        color: #F5A300;
+    }
+
+    .filter-users:hover {
+        border-color: #F5A300; /* Match the button border color on hover */
+        color: #F5A300; /* Match the button text color on hover */
+    }
+
+    .filter-users:focus {
+        border-color: #F5A300; /* Change border color when focused */
+    }

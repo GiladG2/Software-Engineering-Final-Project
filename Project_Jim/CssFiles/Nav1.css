@@ -1,0 +1,17 @@
+﻿.navigator {
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+    .navigator a {
+        float: left;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+/* Optional: Center the navigation links on the page */
+

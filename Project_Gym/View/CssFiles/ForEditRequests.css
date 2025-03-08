@@ -1,0 +1,102 @@
+﻿body {
+    background-color: #f0effc;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; /* Removed the font */
+}
+
+/* Center the container on the screen */
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Style the form */
+form {
+    color: #ffffff; /* Changed to pure white for better contrast */
+    background: rgb(0,97,0);
+    background: linear-gradient(149deg, rgba(0,97,0,1) 0%, rgba(108,207,112,1) 75%, rgba(240,240,240,1) 100%); /* Changed to a light silver */
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 75%;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style the progress bar steps */
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.progress-step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #6bcf70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .progress-step.active {
+        background-color: #4caf50;
+    }
+
+.progress-bar .progress-step:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Style for navigation buttons */
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:disabled {
+        background-color: #ddd;
+        cursor: not-allowed;
+    }
+
+/* Style for select input sections */
+.select {
+    margin-bottom: 15px;
+    background-color: #e0e0e0; /* A more elegant light silver shade */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #003300; /* Dark green text to fit the theme */
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
