@@ -11,6 +11,7 @@ namespace Project_Gym.View
 {
     public partial class Admin : System.Web.UI.Page
     {
+
         DataTable dt;
         public string tablename = "tblUsers";
         public string date;
