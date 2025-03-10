@@ -64,7 +64,7 @@ namespace ControllersProject.Modal
             int exerciseId;
             int order;
             int reps;
-            int weight;
+            double weight;
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -72,7 +72,7 @@ namespace ControllersProject.Modal
                 exerciseName = me.GetExerciseName(exerciseId);
                 order = int.Parse(dt.Rows[i]["fldOrder"].ToString());
                 reps = int.Parse(dt.Rows[i]["fldReps"].ToString());
-                weight = int.Parse(dt.Rows[i]["fldWeight_Kg"].ToString());
+                weight = double.Parse(dt.Rows[i]["fldWeight_Kg"].ToString());
                 list.Add(new TrainingLogExerciseFormat(exerciseName,exerciseId,order,reps,weight));
             }
             return list;

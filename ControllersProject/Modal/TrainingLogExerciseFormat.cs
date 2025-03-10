@@ -12,7 +12,7 @@ namespace ControllersProject.Modal
         private int exerciseId;
         private int order;
         private int reps;
-        private int weight;
+        private double weight;
         public TrainingLogExerciseFormat(string exerciseName, int exerciseId, int order, int reps, int weight)
         {
             this.exerciseName = exerciseName;
@@ -26,6 +26,6 @@ namespace ControllersProject.Modal
         public int ExerciseId { get => exerciseId; set => exerciseId = value; }
         public int Order { get => order; set => order = value; }
         public int Reps { get => reps; set => reps = value; }
-        public int Weight { get => weight; set => weight = value; }
+        public double Weight { get => weight; set => weight = value; }
     }
 }
