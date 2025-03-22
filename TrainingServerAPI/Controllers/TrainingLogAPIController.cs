@@ -54,5 +54,13 @@ namespace TrainingServerAPI.Controllers
             int planId = _plan_controller.GetPlanIdByUser(userId);
             return new JsonResult(Ok(Training_Log_Controller.GetGraphDataAPI(exerciseId,planId,period)));
         }
+
+        [HttpGet("GetLogHistory")]
+
+        public IActionResult GetLogHistory(string username)
+        {
+            int userId = _users_controller.GetUserId(username);
+            return (Ok(Training_Log_Controller.GetLogGHistory(userId)));
+        }
     }
 }

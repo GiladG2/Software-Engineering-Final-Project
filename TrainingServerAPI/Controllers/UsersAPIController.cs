@@ -256,6 +256,7 @@ namespace TrainingServerAPI.Controllers
             int userId = cu.GetUserId(username);
             return new JsonResult(Ok(lirc.InsertLogInRecord(userId)));
         }
+
         
     }
 }

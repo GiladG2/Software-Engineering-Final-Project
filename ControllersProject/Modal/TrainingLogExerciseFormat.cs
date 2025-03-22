@@ -13,7 +13,7 @@ namespace ControllersProject.Modal
         private int order;
         private int reps;
         private double weight;
-        public TrainingLogExerciseFormat(string exerciseName, int exerciseId, int order, int reps, int weight)
+        public TrainingLogExerciseFormat(string exerciseName, int exerciseId, int order, int reps, double weight)
         {
             this.exerciseName = exerciseName;
             this.exerciseId = exerciseId;

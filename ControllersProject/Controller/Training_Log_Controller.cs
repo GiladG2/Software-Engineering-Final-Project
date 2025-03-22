@@ -10,7 +10,7 @@ namespace ControllersProject.Controller
     public class Training_Log_Controller
     {
         private static Modal_Training_Log tlm = new Modal_Training_Log();
-       
+        
 
         public static bool SaveExercise(int planId, int reps, int weight, int exerciseId, int userId, string date)
         {
@@ -49,6 +49,10 @@ namespace ControllersProject.Controller
         public static List<GraphDataFormat> GetGraphDataAPI(int exerciseId,int planId,int period)
         {
             return tlm.GetGraphDataAPI(exerciseId, planId, period);
+        }
+        public static Dictionary<string,Dictionary<string,object>> GetLogGHistory(int userId)
+        {
+            return tlm.GetLogInHistory(userId);
         }
     }
 }

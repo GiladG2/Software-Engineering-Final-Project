@@ -354,6 +354,31 @@ namespace ControllersProject.Modal
                 }
             }
         }
+        public Dictionary<string, Dictionary<string, object>> GetLogInHistory(int userId)
+        {
+            string query = @"
+    SELECT DISTINCT CONVERT(varchar(10), e.fldDate, 120) as LogDate
+    FROM tblExercises_Worked_In_Workout e
+    INNER JOIN tblPlans p ON e.fldPlan_Id = p.fldPlan_Id
+    WHERE p.fldUser_Id = " + userId + @"
+    ORDER BY LogDate DESC";
+
+            DataTable dt = AdoHelper.GetDataTable(file, query);
+            Dictionary<string, Dictionary<string, object>> markedDates = new Dictionary<string, Dictionary<string, object>>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string date = row["LogDate"].ToString();
+                markedDates[date] = new Dictionary<string, object>
+        {
+            { "marked", true },
+            { "selected", false }, // Fix: Default to false until user selects
+            { "selectedColor", "green" }
+        };
+            }
+
+            return markedDates;
+        }
 
     }
 }
