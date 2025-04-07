@@ -796,7 +796,6 @@
     <Content Include="View\Registration.aspx" />
     <Content Include="View\SeeReviews.aspx" />
     <Content Include="View\Send_Review.aspx" />
-    <Content Include="View\Test.aspx" />
     <Content Include="View\Training_Log.aspx" />
     <Content Include="View\Training_Plans.aspx" />
     <Content Include="libman.json" />
@@ -804,16 +803,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\DBOperations\DBOperations.wsdl" />
-    <None Include="Web References\DBOperations\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Web References\DBOperations\TaskOfBoolean.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </Content>
     <None Include="Web References\EmailSender\EmailSender.disco" />
-    <None Include="Web References\DBOperations\DBOperations.disco" />
     <Content Include="Web References\SmsSender\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -921,13 +911,6 @@
     <Compile Include="View\Send_Review.aspx.designer.cs">
       <DependentUpon>Send_Review.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-    </Compile>
     <Compile Include="View\Training_Log.aspx.cs">
       <DependentUpon>Training_Log.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -941,11 +924,6 @@
     </Compile>
     <Compile Include="View\Training_Plans.aspx.designer.cs">
       <DependentUpon>Training_Plans.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Web References\DBOperations\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\EmailSender\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -1007,17 +985,6 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="https://localhost:44396/DBOperations.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\DBOperations\</RelPath>
-      <UpdateFromURL>https://localhost:44396/DBOperations.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>Project_Gym_DBOperations_DBOperations</CachedSettingsPropName>
-    </WebReferenceUrl>
     <WebReferenceUrl Include="https://localhost:44396/EmailSender.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\EmailSender\</RelPath>

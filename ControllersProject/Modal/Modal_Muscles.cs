@@ -18,13 +18,16 @@ namespace ControllersProject.Modal
         {
             _adoHelper = new AdoHelper();
         }
-      
+        
+        //פעולה המחזירה את מס הזהות האחרון במסד הנתונים ומוסיפה לו אחד
         private int GetNextMuscleId()
         {
             string query = "SELECT ISNULL(MAX(fldMuscle_Id), 0) + 1 AS NextId FROM tblMuscles_List";
             DataTable dt = _adoHelper.GetDataTable(query);
             return dt.Rows.Count > 0 ? int.Parse(dt.Rows[0]["NextId"].ToString()) : 1;
         }
+
+        //פעולה המחזירה שם של שריר לפי מס הזהות שלו
         public string GetMuscleNameFromId(int muscleId)
         {
             string query = $"SELECT fldMuscle_Name FROM tblMuscles_List WHERE fldMuscle_Id = {muscleId}";
@@ -38,7 +41,7 @@ namespace ControllersProject.Modal
             string query = "SELECT * FROM tblMuscles_List";
             return _adoHelper.GetDataSet(query);
         }
-
+        //פעולה המוסיפה שריר למסד הנתונים
         public bool AddMuscle(string muscleName, string muscleDescription, int muscleGroupId)
         {
             // Insert into tblMuscles_List
@@ -57,7 +60,7 @@ namespace ControllersProject.Modal
 
             return isInserted;
         }
-
+        //פעולה העורכת שריר במסד הנתונים
         public bool EditMuscle(int muscleId, string muscleName)
         {
             string query = $@"
@@ -83,7 +86,7 @@ namespace ControllersProject.Modal
             return _adoHelper.CheckInsert(query) > 0;
         }
 
-        
+        //פעולה המחזירה רשימה נפתחת של כל השרירים במסד הנתונים
         public string GetAllMusclesForDropdown()
         {
             try

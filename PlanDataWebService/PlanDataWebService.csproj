@@ -287,6 +287,7 @@
     <Content Include="View\DashBoard.aspx" />
     <Content Include="View\EditExercises.aspx" />
     <Content Include="View\JsFiles\ForDashboard.js" />
+    <Content Include="View\LogOut.aspx" />
     <Content Include="View\Log_In.aspx" />
     <Content Include="View\AddMuscles.aspx" />
     <Content Include="View\CssFiles\ForAddExercise.css" />
@@ -320,6 +321,13 @@
     </Compile>
     <Compile Include="View\EditExercises.aspx.designer.cs">
       <DependentUpon>EditExercises.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Log_In.aspx.cs">
       <DependentUpon>Log_In.aspx</DependentUpon>

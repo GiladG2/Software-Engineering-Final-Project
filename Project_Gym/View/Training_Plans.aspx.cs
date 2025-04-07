@@ -31,6 +31,8 @@ namespace Project_Gym.View
             filedARequest = plan_c.UserFiledARequest(user_id);
             hasAplan = plan_c.HasAPlan(user_id);
             Plan_Controller plan_controller = new Plan_Controller();
+            if (filedARequest)
+            {
             if (!hasAplan )
             {
                 if (Session["plan"] == null)
@@ -41,6 +43,8 @@ namespace Project_Gym.View
             pdfResponse = DisplayPlan();        
             msg = pdfControllder.CreatePdfFile(Session["fusername"].ToString(),pdfResponse);
             }
+            }
+            
                 
 
             downloadName = $"{Session["fusername"].ToString()}'s Plan";

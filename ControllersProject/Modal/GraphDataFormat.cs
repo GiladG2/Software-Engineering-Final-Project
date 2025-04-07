@@ -8,9 +8,8 @@ namespace ControllersProject.Modal
 {
     public class GraphDataFormat
     {
-        int value;
-        string date;
-
+        int value;//Saves the y axis value
+        string date;//Saves the x axis value
         public GraphDataFormat(int value, string date)
         {
             this.value = value;

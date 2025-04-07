@@ -108,7 +108,7 @@
  <script type="text/babel">
       ReactDOM.render(<EditableText />, document.getElementById('react-root'));
     </script>
-    <a id="editPlan" class="edit" href="#">Edit Plan</a>
+    <a id="editPlan" class="edit editPlan" href="#">Edit Plan</a>
     <a id="editReq" class="edit" href="Edit_Requests.aspx">Edit Requests</a>
 </div>
                     <%=response %>

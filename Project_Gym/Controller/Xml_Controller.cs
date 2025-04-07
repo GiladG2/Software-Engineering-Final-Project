@@ -21,6 +21,9 @@ namespace Project_Gym.Controller
         int reviewsall = 0;
         string reviews = "";
         Users_Controller cu = new Users_Controller();
+
+        //HTMLמחזיר בפורמט של 
+        //את כל הביקורות שנשלחות למנהלי האתר
         public string GetResponses(string username)
         {
             string FilePath = HttpContext.Current.Server.MapPath("~/App_Data/XML/responses.xml");
@@ -55,7 +58,7 @@ namespace Project_Gym.Controller
 
             return reviews;
         }
-
+        //לאחר צפייה בהודעה, משנה את הסטטוס שלה ל"נצפה"
         public string UpdateStatus(int id, string filePath)
         {
             try
@@ -153,7 +156,7 @@ namespace Project_Gym.Controller
             return 0;
         }
 
-
+        
         public void UpdateId(string filePath)
         {
             string idFilePath = HttpContext.Current.Server.MapPath("~/App_Data/XML/id.xml");
@@ -244,7 +247,8 @@ namespace Project_Gym.Controller
             UpdateId(FilePath);
 
         }
-
+        //XMLהכנסת ביקורת של משתמש על האתר לקובץ ה
+        //הייעודי לכך
         public string InsertAdminReviews(string username, string date, string rating, string comment, string title)
         {
 

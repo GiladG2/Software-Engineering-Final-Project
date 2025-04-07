@@ -37,9 +37,9 @@ internal class Modal_Plan
 
     public int GetTypeOfTraining(int user_id)
     {
-        string query = "SELECT fldTraining_Type FROM tblUser_Requests WHERE fldUser_Id = " + user_id;
+        string query = "SELECT fldType_Of_Training FROM tblUser_Requests WHERE fldUser_Id = " + user_id;
         DataTable dataTable = AdoHelper.GetDataTable("DB.mdf", query);
-        return (dataTable.Rows.Count > 0) ? Convert.ToInt32(dataTable.Rows[0]["fldTraining_Type"]) : 0;
+        return (dataTable.Rows.Count > 0) ? Convert.ToInt32(dataTable.Rows[0]["fldType_Of_Training"]) : 0;
     }
 
     public int GetExeprience(int user_id)
@@ -61,7 +61,7 @@ internal class Modal_Plan
         return (dataTable.Rows.Count > 0) ? dataTable.Rows[0]["fldCreation_Date"].ToString() : string.Empty;
     }
 
-        public int GetAmoutOflogged(int planId, int period = 2)
+    public int GetAmoutOflogged(int planId, int period = 2)
         {
             string text = @"
 WITH RankedExercises AS (
@@ -104,8 +104,7 @@ FROM (
 
             return (dataTable.Rows.Count > 0) ? Convert.ToInt32(dataTable.Rows[0]["DaysWithTwoExercises"]) : 0;
         }
-
-        public Exercise GetExercise(string muscleName, double difficulty)
+    public Exercise GetExercise(string muscleName, double difficulty)
     {
         int num = 0;
         string query = "SELECT * FROM tblMuscles_List WHERE fldMuscle_Name = '" + muscleName + "'";
@@ -145,6 +144,7 @@ FROM (
         return dataTable.Rows.Count != 0;
     }
 
+    
     public int GetWorkoutIdByName(string workoutName)
     {
         return workoutName switch
@@ -162,7 +162,7 @@ FROM (
         DataTable dataTable = AdoHelper.GetDataTable("DB.mdf", query);
         return dataTable.Rows.Count > 0;
     }
-
+    //פעולה המכניסה לתוך מסד הנתונים תוכנית חדשה שהאתר יצר עבור משתמש
     public void InsertPlan(LinkedList<Workout> plan, int userId)
     {
         string query = "INSERT INTO tblPlans(fldUser_Id, fldCreation_Date) VALUES(" + userId + ", CAST(GETDATE() AS DATE))";
@@ -189,7 +189,7 @@ FROM (
             }
         }
     }
-
+    //פעולה הבודקת האם למשתמש יש כבר תוכנית אימונים באתר
     public bool HasAPlan(int userId)
     {
         string query = "SELECT * FROM tblPlans WHERE fldUser_Id = " + userId;
@@ -203,13 +203,13 @@ FROM (
         DataTable dataTable = AdoHelper.GetDataTable("DB.mdf", query);
         return (dataTable.Rows.Count != 0) ? dataTable.Rows[0]["fldWorkout_Name"].ToString() : string.Empty;
     }
-
+     
     public string GetWorkoutDetails(int planId)
     {
         string query = $"SELECT fldWorkoutDetails FROM tblPlans WHERE fldPlan_Id = {planId}";
         return AdoHelper.GetDataTable("DB.mdf", query).Rows[0]["fldWorkoutDetails"].ToString();
     }
-
+    
     public bool InsertPlan(int userId, string workoutDetails)
     {
         string query = $"INSERT INTO tblPlans (user_id, fldWorkoutDetails, fldCreation_Date) VALUES ({userId}, '{workoutDetails}', '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}')";
@@ -340,6 +340,7 @@ FROM (
         return result;
     }
 
+    //פעולה המחזירה את תוכנית האימונים של המשתמש להצגה באתר
     public LinkedList<Workout> GetPlan(int userId)
     {
         int planIdByUser = GetPlanIdByUser(userId);

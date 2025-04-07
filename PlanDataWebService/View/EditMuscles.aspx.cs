@@ -15,8 +15,10 @@ namespace PlanDataWebService.View
         Analytics_Controller ac = new Analytics_Controller();
         int userId;
         private DBOperations dBOperations = new DBOperations();
-        protected void Page_Load(object sender, EventArgs e)
-        {       string username = Session["username"].ToString();
+        protected void Page_Load(object sender, EventArgs e) { 
+            if (Session["username"] == null)
+                Response.Redirect("Home_Page.aspx");
+            string username = Session["username"].ToString();
                 // Fetch user ID using Controller_Users
                 Controller_Users cu = new Controller_Users();
                 userId = cu.GetUserIdByUsername(username);

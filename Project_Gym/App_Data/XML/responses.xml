@@ -211,12 +211,12 @@
     <date>18/11/2024</date>
     <title>Hi</title>
   </response>
-  <response status="Seen" id="9">
-    <username>Adm</username>
-    <writer>11</writer>
-    <content>zcvxcxvzxvczxcvzxcv</content>
-    <date>18/11/2024</date>
-    <title>Hi</title>
+  <response status="Seen" id="9">//מספר סידורי והאם המייל נצפה
+    <username>Adm</username>//למי לשלוח את המייל
+    <writer>11</writer>//כותב המייל
+    <content>It was great!</content>//תוכן המייל
+    <date>18/11/2024</date>//תאריך שליחת המייל
+    <title>Hi</title>//כותרת המייל
   </response>
   <response status="Seen" id="8">
     <username>Adm</username>

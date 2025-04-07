@@ -40,7 +40,7 @@
                                 <!-- Show these links if the user is logged in -->
                                 <li><a href="DashBoard.aspx">Dashboard</a></li>
                                 <li><a href="ManageProfile.aspx">Manage</a></li>
-                                <li><a href="Log_Out.aspx">Log Out</a></li>
+                                <li><a href="LogOut.aspx">Log Out</a></li>
                             <% 
                                 } else { 
                             %>

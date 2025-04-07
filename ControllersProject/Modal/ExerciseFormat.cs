@@ -8,8 +8,8 @@ namespace ControllersProject.Modal
 {
     public class ExerciseFormat
     {
-        private int value;
-        private string label;
+        private int value;//Saves the Exercise's Id
+        private string label;//Saves the Exercise's Name
         public ExerciseFormat(int value, string label)
         {
             this.value = value;

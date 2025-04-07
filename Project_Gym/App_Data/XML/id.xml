@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <All>
-  <Storage>
-    <filePath>F:\c#\אינטרנט\פרויקט יא יב\Project_Jim\Project_Gym\App_Data\XML\responses.xml</filePath>
-    <Id>35</Id>
+  <Storage>//תגית אחסון של מספר סידורי
+    //תגית השומרת לאיזה קובץ מיוחס המספר הסידורי
+    <filePath>F:\c#\אינטרנט\פרויקט יא יב\Project_Jim\
+	Project_Gym\App_Data\XML\responses.xml</filePath><Id>35</Id>//המספר הסידורי הנוכחי
   </Storage>
   <Storage>
     <filePath>F:\c#\אינטרנט\פרויקט יא יב\Project_Jim\Project_Gym\App_Data\XML\reviews.xml</filePath>
@@ -14,6 +15,6 @@
   </Storage>
   <Storage>
     <filePath>D:\c#\אינטרנט\פרויקט יא יב\Project_Jim\Project_Gym\App_Data\XML\reviews.xml</filePath>
-    <Id>1</Id>
+    <Id>4</Id>
   </Storage>
 </All>

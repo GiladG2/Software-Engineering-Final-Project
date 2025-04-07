@@ -12,6 +12,7 @@ namespace ControllersProject.Controller
         Modal_Progression progression_Model = new Modal_Progression();
         Plan_Controller plan_controller = new Plan_Controller();
         User_Requests_Controller user_request_controller = new User_Requests_Controller();
+        FeedbackAI_Controller feedbackAI_Controller = new FeedbackAI_Controller();
         public double GetProgression(int planId, int period, int exerciseId)
         {
             return progression_Model.GetProgression(planId, period, exerciseId);
@@ -20,7 +21,7 @@ namespace ControllersProject.Controller
         {
             double m = GetProgression(planId, period, exerciseId);
             if (m == 0)
-                if (plan_controller.UserHasLogged(planId, exerciseId))
+                if (!plan_controller.UserHasLogged(planId, exerciseId))
                     return -1;
                 else
                     return 0;
@@ -34,12 +35,12 @@ namespace ControllersProject.Controller
             int L = 10;
             double growthFunction = L / (1 + Math.Pow(Math.E, -0.5 * (x - t0)));
             return growthFunction;
-            //f(x) = L / (1+e^(-k(t-t0)))
-            //Where
-            //L is the limit of f(x)
+            // f(x) = L / (1+e^(-k(x-t0)))
+            // Where
+            // L is the limit of f(x)
             // t0 - halfway point to the limit of f(x)
-            //x - user growth
-            //k - function rate of growth
+            // x - user growth
+            // k - function rate of growth
         }
         public string TestGradeOfProgression(int planId, int period, int exerciseId)
         {
@@ -91,7 +92,8 @@ namespace ControllersProject.Controller
             // Case 3: Really good progression (> 0.6)
             else if (score > 0.6)
             {
-                feedback = "<p>You are doing really well! Keep up the great work and continue with this exercise!</p>";
+                feedback = "Write something along those lines inside a <p> tag. You are doing really well! Keep up the great work and continue with this exercise! ";
+                feedback =  feedbackAI_Controller.CallCohereApiAsync(feedback).GetAwaiter().GetResult();
             }
             // Case 4: Fine progression (other cases)
             else if (score > 0.01)

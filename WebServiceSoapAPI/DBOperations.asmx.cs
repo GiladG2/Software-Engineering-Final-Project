@@ -22,12 +22,12 @@ namespace WebServiceSoapAPI
             return !string.IsNullOrWhiteSpace(muscleName) && !string.IsNullOrWhiteSpace(description) && muscleGroup >= 0 &&
                    musclesAPController.AddMuscle(muscleName, description, muscleGroup);
         }
-
+        //הוספת שריר
         [WebMethod]
         public bool AddNewMuscle(string muscleName, string description, int muscleGroup)
         {
             return !string.IsNullOrWhiteSpace(muscleName) && !string.IsNullOrWhiteSpace(description) && muscleGroup >= 0 &&
-                   musclesController.AddMuscle(muscleName, description, muscleGroup);
+                musclesController.AddMuscle(muscleName, description, muscleGroup);
         }
 
         // *** DELETE MUSCLE ***
@@ -36,7 +36,7 @@ namespace WebServiceSoapAPI
         {
             return muscleId >= 0 && musclesAPController.DeleteMuscle(muscleId);
         }
-
+        //מחיקת שריר
         [WebMethod]
         public bool DeleteMuscle(int muscleId)
         {
@@ -51,10 +51,13 @@ namespace WebServiceSoapAPI
                    exerciseAPIController.AddExercise(exerciseName, exerciseDesc, difficulty, timeToComplete, muscleId);
         }
 
+
+        //הוספת תרגיל
         [WebMethod]
         public bool AddNewExercise(string exerciseName, string exerciseDesc, double difficulty, int timeToComplete, int muscleId)
         {
-            return !string.IsNullOrWhiteSpace(exerciseName) && !string.IsNullOrWhiteSpace(exerciseDesc) && difficulty >= 0 && timeToComplete >= 0 && muscleId >= 0 &&
+            return !string.IsNullOrWhiteSpace(exerciseName) && 
+                !string.IsNullOrWhiteSpace(exerciseDesc) && difficulty >= 0 && timeToComplete >= 0 && muscleId >= 0 &&
                    exerciseController.AddExercise(exerciseName, exerciseDesc, difficulty, timeToComplete, muscleId);
         }
 

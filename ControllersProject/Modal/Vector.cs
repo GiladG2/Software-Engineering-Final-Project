@@ -43,20 +43,11 @@ namespace ControllersProject.Modal
         //טענת יציאה: הפעולה תחזיר ציון, ככל שהוא יותר גבוהה, הווקטורים יותר קרובים אחד לשני
         //ככל שהציון נמוך יותר, הווקטורים רחוקים יותר אחד מהשני
         public static double GetDotProduct(Vector v1, Vector v2)
-        { /* 
-             הנוסחה שהמצאתי ואשתמש בה היא 
-            Score = a*cos(c) - b*(|v1|-|v2|)
-            כאשר
-            c - הזווית בין שני הווקטורים
-            a- קבוע 
-            b - קבוע
-            |v1|,|v2| - אורכי הווקטורים
-            אני משתמש בקבועים כדי לתת משקל שונה לאורך הווקטורים והקרבה שלהם
-             */
+        { 
             if (v1.Length == 0 || v2.length == 0)
                 return 0;
             const int a = 3,
-                b = 2;
+                      b = 2;
             double score = a * Math.Cos(AngleBetweenTwoVectors(v1, v2)) - b * Math.Abs((v1.Length - v2.Length));
             return score;
         }

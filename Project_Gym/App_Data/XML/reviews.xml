@@ -1,6 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <All>
-  <review status="Not seen" id="1">
+  <review status="Not seen" id="4">
+    <title>This site is incredible</title>
+    <username>Adm</username>
+    <comment>I have enjoyed the services this site offers me</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>03/04/2025</date>
+  </review>
+  <review status="Not seen" id="3">
+    <title>The site it ok</title>
+    <username>Adm</username>
+    <comment>I feel that it can benifit from additional features</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>03/04/2025</date>
+  </review>
+  <review status="Not seen" id="2">
+    <title>This site is great</title>
+    <username>Adm</username>
+    <comment>The site so far has answered all my needs thanks</comment>
+    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
+    <date>03/04/2025</date>
+  </review>
+  <review status="Seen" id="1">
     <title>shIT WEBSITE</title>
     <username>ChildPorn55</username>
     <comment>NIGGA WHERE IS THE CHILD PORN? I DIDNT SIGN UP FOR THIS SHIT</comment>
@@ -182,12 +203,17 @@
     <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
     <date>08:08:25</date>
   </review>
-  <review>
-    <title>my honest review</title>
-    <username>Bagrut</username>
-    <comment>I recently visited the website and I was quite impressed with its layout and content. The homepage had a clean design and was easy to navigate. The website had a good selection of articles covering a range of topics, and I found the search function to be very helpful. One of the features I particularly liked was the ability to save articles for later. This made it easy for me to keep track of articles I wanted to read at a later time. Additionally, the website had a section where users could submit their own articles, which I thought was a nice touch. The website was also mobile-responsive, which meant I could easily access it from my phone or tablet. I did notice a few minor issues with page loading speed, but overall the website was very fast and responsive. Overall, I would highly recommend this website to anyone looking for informative articles on a variety of topics. The layout was clean and user-friendly, the content was well-written and informative, and the ability to save articles for later was a nice touch.</comment>
-    <rating>&lt;i class="fa-solid fa-star" style="color: #f6e310;"&gt;&lt;/i&gt;</rating>
-    <date>20:52:26</date>
+  <review> //תגית תגובה
+    <title>my honest review</title>//כותרת התגובה
+    <username>Bagrut</username>//שם המשתמש של כותב התגובה
+    <comment>I recently visited 
+	the website and I was quite impressed 
+	with its layout and content. The homepage had 
+	a clean design and was easy to navigate.</comment>//תוכן התגובה
+	//HTMLייצוג ב
+	//של כמות הכוכבים בדירוג התגובה
+    <rating>&lt;i class="fa-solid fa-star" 
+	style="color: #f6e310;"&gt;&lt;/i&gt;</rating><date>20/11/2024</date>//תאריך כתיבת התגובה
   </review>
   <review>
     <title>the gallery needs a change</title>

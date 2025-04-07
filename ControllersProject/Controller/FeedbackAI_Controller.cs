@@ -38,6 +38,7 @@ public class FeedbackAI_Controller
         }
     }
 
+ 
     private (double totalScore, int exerciseCount) GetPlanProgressionScores(int planId, int userId)
     {
         double num = 0.0;
@@ -80,7 +81,7 @@ public class FeedbackAI_Controller
         return "Write a long and motivational feedback for below-average progress. Encourage the user to stick with it and try a new plan if necessary. Include a button linking to 'Training_Plans.aspx'.";
     }
 
-    private async Task<string> CallCohereApiAsync(string prompt)
+    public async Task<string> CallCohereApiAsync(string prompt)
     {
         using HttpClient client = new HttpClient();
         client.DefaultRequestHeaders.Add("Authorization", "Bearer HP23zMHlUQ1DCnrd78BwivgZCVoA8q1GYOajSqUO");

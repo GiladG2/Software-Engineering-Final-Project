@@ -3,6 +3,7 @@ using IronPdf.Engines.Marshalers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
@@ -106,10 +107,13 @@ namespace Project_Gym.View
             return Training_Log_Controller.DeleteLoggedExercise(exerciseId, planId, date, order);
         }
         [WebMethod]
-        public static string GetFeedbackForExercise(int userId,int planId,int period, int exerciseId)
+        public static string GetFeedbackForExercise(int userId, int planId, int period, int exerciseId)
         {
-          return  progression_Controller.GetFeedbackForExercise(userId,planId,period,exerciseId);
+            return progression_Controller
+                .GetFeedbackForExercise(userId, planId, period, exerciseId);
+                
         }
+
         [WebMethod]
         public static void UpdatePlan(int planId,int exerciseId, int newExerciseId)
         {

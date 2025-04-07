@@ -104,7 +104,6 @@ namespace ControllersProject.Modal
                 return dt.Rows[0]["fldDate"].ToString();
             return "";
         }
-
         public int GetAge(string username)
         {
             string birthDateString = GetDate(username);
@@ -166,6 +165,9 @@ namespace ControllersProject.Modal
         }
 
         // Log in
+        //פעולה הבודקת האם משתמש קיים במסד הנתונים -שימוש בפרוצדורה שמורה
+        //ובפרמטרים על מנת למנוע 
+        //SQL injection
         public bool Testada(string username, string password)
         {
             using (SqlConnection connection = AdoHelper.ConnectToDb(file))
@@ -185,7 +187,10 @@ namespace ControllersProject.Modal
         }
 
         // Sign in
-        public bool AddData(string username, string password, string firstname, string phonenumber, int gender, string date, int goal, int access, string email)
+        //פעולה המקבלת נתוני משתמש מטופס ההרשמה ומוסיפה אותו למסד הנתונים
+        public bool AddData(string username, string password, 
+            string firstname, string phonenumber, int gender,
+            string date, int goal, int access, string email)
         {
             if(Testada(username, password)) {
                 return false;

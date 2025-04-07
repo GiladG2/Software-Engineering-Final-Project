@@ -23,7 +23,7 @@ namespace Project_Gym.View
                     msg = "this username is already taken";
                 else
                 {
-                    if (controller_Users.AddData(username,password,firstname,phonenumber,gender,date,goal,access, email) == true)
+                    if (controller_Users.AddData(username,password,firstname,phonenumber,gender,date,goal,access, email) == true)//הרשמת המשתמש
                     {
                         if (Session["accesskey"] == null)
                         {
@@ -35,7 +35,7 @@ namespace Project_Gym.View
                             }
                             catch
                             {
-
+                                msg = "Thanks for registaring, an error occured while sending you an email";
                             }
                         }
                         else

@@ -329,8 +329,10 @@ namespace ControllersProject.Modal
                 }
             }
         }
-
-        public string DeleteLoggedExercise(int exerciseId, int planId, string date, int order)
+       
+        //פעולה המוחקת תרגיל מיומן האימונים
+        public string DeleteLoggedExercise(int exerciseId, int planId, 
+            string date, int order)
         {
             // Using parameterized queries to prevent SQL injection and improve security
             string str = "DELETE FROM tblExercises_Worked_In_Workout WHERE fldPlan_Id = @planId AND fldDate = @date AND fldOrder = @order";

@@ -20,8 +20,9 @@ google.charts.setOnLoadCallback(function () {
             console.error('Error fetching data:', error);
         });
 });
-
-function getProgReview(planId) {
+document.addEventListener("DOMContentLoaded", function () {
+    // your fetch code and functions go here
+    function getProgReview(planId) {
     var msgSpan = document.getElementById("progReview")
     const exerciseList = document.getElementById('exercise-list');
     const exerciseId = exerciseList.value;
@@ -39,7 +40,7 @@ function getProgReview(planId) {
     })
         .then(response => response.json())
         .then(data => {
-            console.log('Data received from server:', data);
+            console.log('Data received from server for feedback:', data);
             msgSpan.innerHTML = data.d
         })
         .catch(error => {
@@ -47,6 +48,9 @@ function getProgReview(planId) {
         });
     
 }
+
+});
+
 
 function drawChart(planId) {
     const exerciseList = document.getElementById('exercise-list');
@@ -199,6 +203,7 @@ function drawChart(planId) {
     getProgReview(planId)
 }
 
+//פעולה שמוסיפה תרגיל לתצוגה של יומן האימונים
 async function addExerciseBox(userId, planId) {
     // Get the template
     const template = document.getElementById('exercise-template');
@@ -239,16 +244,17 @@ async function addExerciseBox(userId, planId) {
         // Append the cloned content to the exercise list container
         document.getElementById('exerciseList').appendChild(clone);
 
-        // Save the exercise (assuming this is part of your logic)
+        // Save the exercise in the backend
         saveExercise(userId, planId);
     } catch (error) {
         console.error("Error getting highest order:", error);
     }
 }
 
-
+//קבלת המספר הסידורי הכי גבוה של תרגיל באימון ביומן האימונים בצורה א-סינכרונית
 async function getHighestOrder(planId, date) {
     try {
+        //קבלת המספר הסידורי הכי גבוה באימון מסוים ביומן האימונים
         const response = await fetch("Training_Log.aspx/GetMaxOrder", {
             method: "POST",
             headers: {
@@ -265,10 +271,12 @@ async function getHighestOrder(planId, date) {
         }
 
         const data = await response.json();
-        return parseInt(data.d, 10); // Return the integer value of the data
+        return parseInt(data.d, 10); //מחזיר את המספר הסידורי
     } catch (error) {
         console.error("Error during fetch:", error);
-        return null; // Return a default value or handle the error as needed
+        // מחזיר נאל על מנת לייצג כי לא נמצא מספר סידורי, 
+        //יומן האימונים ריק בתאריך המבוקש
+        return null; 
     }
 }
 

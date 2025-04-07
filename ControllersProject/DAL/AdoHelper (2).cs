@@ -47,18 +47,7 @@ namespace ControllersProject.DAL
         }
 
         // Check if a record exists (default database)
-        public bool IsExist(string query)
-        {
-            using (SqlConnection conn = ConnectToDb())
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                bool found = reader.Read();
-                conn.Close();
-                return found;
-            }
-        }
+
 
         // Check if a record exists (specific database file)
         public static bool IsExist(string fileName, string query)

@@ -24,7 +24,7 @@ namespace WebServiceSoapAPI
     // [System.Web.Script.Services.ScriptService]
     public class EmailSender : System.Web.Services.WebService
     {
-
+        //פעולה השולחת אימייל 
         [WebMethod]
         public string SendEmail(string to, string name, string msg)
         {
@@ -66,6 +66,7 @@ namespace WebServiceSoapAPI
             }
         }
         [WebMethod]
+        //פעולה השולחת אימייל כמשתמש חדש נרשם
         public string SendWelcomeEmail(string to, string name,string username,string password)
         {
             // Replace these with actual values
@@ -134,7 +135,7 @@ namespace WebServiceSoapAPI
                 }
             }
         }
-
+        //פעולה השולחת אימייל בסיום רבעון מתחילת התוכנית
         [WebMethod]
         public string SendPlanExpiringEmail(string to, string name, string review, string accountName)
         {
@@ -194,9 +195,6 @@ namespace WebServiceSoapAPI
                 }
             }
         }
-
-
-
-
+    
     }
 }
